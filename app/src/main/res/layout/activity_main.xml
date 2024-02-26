@@ -4,15 +4,166 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFEFE"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="354dp"
+        android:layout_height="672dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fundojogo" />
+
+    <ImageView
+        android:id="@+id/area1"
+        android:layout_width="96dp"
+        android:layout_height="88dp"
+        android:layout_marginBottom="20dp"
+        android:contentDescription="@string/vazio"
+        android:onClick="selecionar"
+        app:layout_constraintBottom_toTopOf="@+id/area4"
+        app:layout_constraintEnd_toStartOf="@+id/area2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/area2"
+        android:layout_width="92dp"
+        android:layout_height="82dp"
+        android:contentDescription="@string/vazio"
+        android:onClick="selecionar"
+        app:layout_constraintBottom_toBottomOf="@+id/area1"
+        app:layout_constraintEnd_toStartOf="@+id/area3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/area1"
+        app:layout_constraintTop_toTopOf="@+id/area1"
+        app:layout_constraintVertical_bias="0.0"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/area3"
+        android:layout_width="98dp"
+        android:layout_height="89dp"
+        android:contentDescription="@string/vazio"
+        android:onClick="selecionar"
+        app:layout_constraintBottom_toBottomOf="@+id/area2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/area2"
+        app:layout_constraintTop_toTopOf="@+id/area2"
+        app:layout_constraintVertical_bias="1.0"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/area4"
+        android:layout_width="90dp"
+        android:layout_height="82dp"
+        android:layout_marginBottom="32dp"
+        android:contentDescription="@string/vazio"
+        android:onClick="selecionar"
+        app:layout_constraintBottom_toTopOf="@+id/area7"
+        app:layout_constraintEnd_toStartOf="@+id/area5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/area5"
+        android:layout_width="85dp"
+        android:layout_height="87dp"
+        android:contentDescription="@string/vazio"
+        android:onClick="selecionar"
+        app:layout_constraintBottom_toBottomOf="@+id/area4"
+        app:layout_constraintEnd_toStartOf="@+id/area6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/area4"
+        app:layout_constraintTop_toTopOf="@+id/area4"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/area6"
+        android:layout_width="97dp"
+        android:layout_height="83dp"
+        android:contentDescription="@string/vazio"
+        android:onClick="selecionar"
+        app:layout_constraintBottom_toBottomOf="@+id/area5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/area5"
+        app:layout_constraintTop_toTopOf="@+id/area5"
+        app:layout_constraintVertical_bias="1.0"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/area7"
+        android:layout_width="92dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="84dp"
+        android:contentDescription="@string/vazio"
+        android:onClick="selecionar"
+        app:layout_constraintBottom_toTopOf="@+id/resultado"
+        app:layout_constraintEnd_toStartOf="@+id/area8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/area8"
+        android:layout_width="83dp"
+        android:layout_height="91dp"
+        android:contentDescription="@string/vazio"
+        android:onClick="selecionar"
+        app:layout_constraintBottom_toBottomOf="@+id/area7"
+        app:layout_constraintEnd_toStartOf="@+id/area9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/area7"
+        app:layout_constraintTop_toTopOf="@+id/area7"
+        app:layout_constraintVertical_bias="1.0"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/area9"
+        android:layout_width="84dp"
+        android:layout_height="90dp"
+        android:contentDescription="@string/vazio"
+        android:onClick="selecionar"
+        app:layout_constraintBottom_toBottomOf="@+id/area8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/area8"
+        app:layout_constraintTop_toTopOf="@+id/area8"
+        app:layout_constraintVertical_bias="0.0"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/resultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resultado"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.913" />
+
+    <Button
+        android:id="@+id/resetar"
+        android:layout_width="80dp"
+        android:layout_height="88dp"
+        android:backgroundTint="#00FFFFFF"
+        android:drawableEnd="@drawable/baseline_360_24"
+        android:onClick="resetarJogo"
+        android:textSize="48sp"
+        app:iconSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/resultado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.915"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.054" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
